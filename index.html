@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAQUINAS DE TURING ONLINE</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="header">
+            MAQUINA DE TURING ONLINE
+        </div>
+
+        <div class="controles">
+
+            <div class="simbolos">
+                <button>AYUDA</button>
+                <span>∑ = Cadena</span><input id="cadena" placeholder="abba" type="text" value="abba">
+                <span>Q = Conjunto finito de estados</span><input id="estados" placeholder="1, 2" type="text"
+                    value="1,2">
+                <span>∑ = alfabeto de entrada</span><input id="alfabeto" placeholder="a, b" type="text" value="a,b">
+                <span>Γ = alfabeto de la cinta de la maquina</span><input id="alfabeto_cinta" placeholder="a, b, Δ"
+                    type="text" value="a,b">
+                <span>S = símbolo vacío (Δ)</span><input id="simbolo_vacio" placeholder="Δ" type="text" value="Δ">
+                <span>F = estados de aceptación / final</span><input id="estados_aceptacion" placeholder="2" type="text"
+                    value="2">
+            </div>
+            <div class="contenedor_instrucciones">
+                <div class="control_instrucciones">
+                    <button class="agregar">AGREGAR</button>
+                </div>
+                <div class="acciones">
+                    <input required id="condicion_busqueda" placeholder="a" type="text">
+                    <input id="proximo_estado" placeholder="1" type="text">
+                    <input id="nuevo_dato" placeholder="a" type="text">
+                    <input id="mover_puntero" placeholder="R" type="text">
+                </div>
+                <div class="instrucciones">
+                    <table id="data">
+                        <tbody>
+                            <td>
+                                No hay instrucciones
+                            </td>
+                            <!-- <tr>
+                            <td class="numero_instruccion">
+                                <span>1</span>
+                            </td>
+                            <td class="instruccion">
+                                <input type="text" readonly>
+                            </td>
+                            <td class="borrar">
+                                <button data-borrar="1" id="borrar"><img src="backspace-solid.svg" alt=""></button>
+                            </td>
+                        </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="control_maquina">
+                    <button id="siguiente">Siguiente</button>
+                    <button id="reiniciar">Reiniciar</button>
+                    <button id="borrar">Borrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="maquina">
+            <div class="cinta">
+                <p>No hay cinta</p>
+                <!-- <span class="arrow">a</span>
+                <span>a</span>
+                <span>a</span>
+                <span>a</span>
+                <span>a</span>
+                <span>a</span> -->
+            </div>
+            <p class="estado">Estado: <span>0</span></p>
+        </div>
+        <div class="footer">
+            <div class="copy">
+                Copyright © MaquinaDeTuringUAS.ml 2019
+            </div>
+        </div>
+    </div>
+    <div class="avisos ocultar">
+        <div class="contenedor_info">
+            <div class="info">
+                No hay mas instrucciones
+            </div>
+            <div class="resultado">
+                No se llegó a un estado de aceptación
+            </div>
+            <button>ACEPTAR</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

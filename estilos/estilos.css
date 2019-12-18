@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.contenedor {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.controles {
+    width: 100%;
+    display: inherit;
+    flex-direction: row;
+}
+
+.simbolos {
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    background: #e6e6e6;
+    margin: 5px;
+    padding: 5px;
+}
+
+.simbolos button {
+    width: 100%!important;
+}
+
+.simbolos input {
+    border: 1px solid #fff;
+    outline: none;
+    width: 90%;
+    padding: 3px;
+}
+
+.simbolos span {
+    width: 90%;
+    margin: 5px 0;
+}
+
+.simbolos span::first-letter {
+    font-weight: bold;
+}
+
+.maquina {
+    background: #e6e6e6;
+    margin: 5px;
+}
+
+.contenedor_instrucciones {
+    width: 50%;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    background: #e6e6e6;
+    margin: 5px;
+    padding: 5px;
+}
+
+.contenedor_instrucciones input {
+    border: none;
+    outline: none;
+    padding: 3px;
+}
+
+.control_instrucciones {
+    width: 100%;
+    display: inherit;
+    justify-content: start;
+    margin-bottom: 5px;
+}
+
+.control_maquina {
+    display: inherit;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.control_instrucciones button, 
+.control_maquina button, 
+.contenedor_info button, 
+.simbolos button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #d9d9d9;
+}
+
+.control_instrucciones button:hover, 
+.control_maquina button:hover, 
+.contenedor_info button:hover,
+.simbolos button:hover {
+    background: rgba(221, 221, 221, .8);
+    transition: all .2s;
+}
+
+.control_maquina button {
+    width: 70px;
+    margin: 3px;
+}
+
+.acciones {
+    margin-bottom: 5px;
+}
+
+.acciones input {
+    width: 20%;
+    height: 15px;
+    border: 1px solid #fff;
+}
+
+.maquina {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    display: inherit;
+    justify-content: center;
+}
+
+.cinta {
+    display: inherit;
+    margin: 30px;
+    font-weight: bold;
+}
+
+.cinta span {
+    width: 30px;
+    height: 30px;
+    display: inherit;
+    background: #cccccc;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.cinta span:nth-last-child() {
+    margin-right: 0;
+}
+
+.cinta span:nth-last-child() {
+    margin-right: 0;
+}
+
+.arrow::after {
+    content: "↑";
+    font-size: 20px;
+    position: absolute;
+    padding-top: 50px;
+}
+
+.footer, .header {
+    background: #e6e6e6;
+    margin: 5px;
+}
+
+.copy {
+    margin: 20px;
+    text-align: center;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.estado {
+    margin-bottom: 10px;
+}
+
+.acciones {
+    display: inherit;
+    justify-content: space-between;
+}
+
+.instrucciones {
+    height: 100%;
+    width: 100%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.instrucciones input {
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button.agregar {
+    width: 100%;
+}
+
+.borrar button img {
+    width: 20px;
+}
+
+.borrar button {
+    outline: none;
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    justify-content: center;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}
+
+td.numero_instruccion {
+    width: 10%;
+    justify-content: center;
+    display: inherit;
+    align-items: center;
+    border: 2px solid #dddddd;}
+
+td.instruccion {
+    width: 75%;
+}
+
+td.borrar {
+    width: 15%;
+    justify-content: center;
+    display: inherit;
+    align-items: center;
+}
+
+td.instruccion input {
+    height: 100%;
+    text-align: center;
+}
+
+.avisos {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_info {
+    background: #f2f2f2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ocultar {
+    display: none;
+}
+
+.info {
+    background: #e6e6e6;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.resultado {
+    background: #e6e6e6;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.contenedor_info button {
+    margin: auto;
+}
+
+@media (max-width: 400px) {
+    .controles {
+        flex-direction: column;
+    }
+
+    .simbolos {
+        width: auto;
+    }
+
+    .contenedor_instrucciones {
+        width: auto;
+    }
+}
